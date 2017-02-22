@@ -6,7 +6,7 @@ Simple Clojure library for using Raspberry Pi GPIO.
 
 ### Leiningen/Boot
 
-    [stormaaja/clj-rpio "0.0.1"]
+    [stormaaja/clj-rpio "0.1.0"]
 
 ## Usage
 
@@ -43,6 +43,8 @@ Cleanup
 ## Notes
 
 You should run your application as an user with sufficient privileges (or with sudo).
+
+Setup and input functions has side effects.
 
 Currently pin numbers are in BCM.
 
