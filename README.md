@@ -16,7 +16,7 @@ Require
 
 Setup pin 4 as an input
 
-    (gpio/setup 4 :input)
+    (gpio/setup 4 gpio/input)
 
 Read value of pin 4
 
@@ -24,7 +24,7 @@ Read value of pin 4
 
 Setup pin 17 as an output
 
-    (gpio/setup 17 :output)
+    (gpio/setup 17 gpio/output)
 
 Set state of pin 17
 
@@ -47,6 +47,9 @@ You should run your application as an user with sufficient privileges (or with s
 Setup and input functions has side effects.
 
 Currently pin numbers are in BCM.
+
+This library is tested only with Raspberry Pi B and
+[Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/)
 
 ## License
 
