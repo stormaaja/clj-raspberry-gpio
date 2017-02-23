@@ -8,7 +8,7 @@
 (def in "in")
 (def out "out")
 
-(def -base-path (env :gpio-path))
+(def -base-path (:gpio-path env))
 (def -setup-path (format "%s/export" -base-path))
 (def -cleanup-path (format "%s/unexport" -base-path))
 
