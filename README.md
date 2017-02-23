@@ -51,6 +51,10 @@ Currently pin numbers are in BCM.
 This library is tested only with Raspberry Pi B and
 [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/)
 
+## Links
+
+- [GPIO file IO](https://sites.google.com/site/semilleroadt/raspberry-pi-tutorials/gpio)
+
 ## License
 
 Copyright © 2017 Matti Ahinko
