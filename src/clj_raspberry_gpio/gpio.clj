@@ -9,14 +9,14 @@
 (def out "out")
 
 (def -base-path (env :gpio-path))
-(def -setup-path (format "%s/export" base-path))
-(def -cleanup-path (format "%s/unexport" base-path))
+(def -setup-path (format "%s/export" -base-path))
+(def -cleanup-path (format "%s/unexport" -base-path))
 
 (defn -pin-path
   [pin]
   (format
     "%s/gpio%d"
-    base-path
+    -base-path
     pin))
 
 (defn -pin-setup-path
