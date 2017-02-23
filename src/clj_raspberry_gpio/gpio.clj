@@ -1,7 +1,11 @@
-(ns clj-raspberry-gpio.gpio)
+(ns clj-raspberry-gpio.gpio
+  (:require [clojure.string :as str]))
 
 (def low 0)
 (def high 1)
+
+(def in "in")
+(def out "out")
 
 (def -base-path "/sys/class/gpio")
 (def -setup-path (format "%s/export" base-path))
@@ -28,19 +32,24 @@
 
 (defn setup
   "Setup pin"
-  [pin mode])
+  [pin mode]
+  (spit -setup-path pin)
+  (spit (-pin-setup-path pin) mode))
 
 (defn input
   "Read pin value"
-  [pin])
+  [pin]
+  (slurp (-pin-path pin)))
 
 (defn output
   "Set pin state"
-  [pin state])
+  [pin state]
+  (spit (-pin-state-path pin) state))
 
 (defn cleanup
   "Cleanup pin"
-  [pin])
+  [pin]
+  (spit -cleanup-path pin))
 
 (defn cleanup-all
   "Cleanup all pins"
