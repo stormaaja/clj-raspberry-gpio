@@ -51,6 +51,22 @@
   [pin]
   (spit -cleanup-path pin))
 
+(defn -match-pin?
+  [pin-dir]
+  (not= (re-matches #"gpio(\d{1,2})" pin-dir) nil))
+
+(defn -parse-pin-number
+  [pin-dir]
+  (str/replace pin-dir #"gpio" ""))
+
+(defn -list-pins
+  []
+  (map
+    -parse-pin-number
+    (filter
+      -match-pin?
+      (file-seq -base-path))))
+
 (defn cleanup-all
   "Cleanup all pins"
   [])
