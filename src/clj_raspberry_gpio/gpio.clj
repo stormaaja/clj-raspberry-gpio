@@ -1,5 +1,6 @@
 (ns clj-raspberry-gpio.gpio
-  (:require [clojure.string :as str]))
+  (require [environ.core :refer [env]]
+              [clojure.string :as str]))
 
 (def low 0)
 (def high 1)
@@ -7,7 +8,7 @@
 (def in "in")
 (def out "out")
 
-(def -base-path "/sys/class/gpio")
+(def -base-path (env :gpio-path))
 (def -setup-path (format "%s/export" base-path))
 (def -cleanup-path (format "%s/unexport" base-path))
 
