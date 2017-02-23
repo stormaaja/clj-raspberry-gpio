@@ -16,7 +16,7 @@ Require
 
 Setup pin 4 as an input
 
-    (gpio/setup 4 gpio/input)
+    (gpio/setup 4 gpio/in)
 
 Read value of pin 4
 
@@ -24,7 +24,7 @@ Read value of pin 4
 
 Setup pin 17 as an output
 
-    (gpio/setup 17 gpio/output)
+    (gpio/setup 17 gpio/out)
 
 Set state of pin 17
 
