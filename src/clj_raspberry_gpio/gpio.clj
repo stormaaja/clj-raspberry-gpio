@@ -54,7 +54,21 @@
 
 (defn -match-pin?
   [pin-dir]
-  (not= (re-matches #"gpio(\d{1,2})" pin-dir) nil))
+  (not=
+    (re-matches #"gpio(\d{1,2})" pin-dir)
+    nil))
+
+(defn -get-name
+  [file]
+  (.getName file))
+
+(defn -list-pin-dirs
+  []
+  (filter
+    -match-pin?
+    (map
+      -get-name
+      (file-seq (clojure.java.io/file -base-path)))))
 
 (defn -parse-pin-number
   [pin-dir]
@@ -64,9 +78,7 @@
   []
   (map
     -parse-pin-number
-    (filter
-      -match-pin?
-      (file-seq -base-path))))
+    (-list-pin-dirs)))
 
 (defn cleanup-all
   "Cleanup all pins"
