@@ -82,4 +82,5 @@
 
 (defn cleanup-all
   "Cleanup all pins"
-  [])
+  []
+  (dorun (map cleanup (-list-pins))))
