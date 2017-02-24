@@ -42,6 +42,8 @@ Cleanup
 
 ## Notes
 
+Library is still quite unfinished and not all GPIO-functions are implemented yet.
+
 You should run your application as an user with sufficient privileges (or with sudo).
 
 Setup and input functions has side effects.
