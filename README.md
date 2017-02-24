@@ -6,7 +6,7 @@ Simple Clojure library for using Raspberry Pi GPIO.
 
 ### Leiningen/Boot
 
-    [stormaaja/clj-rpio "0.1.0"]
+    [clj-raspberry-gpio "0.1.0"]
 
 ## Usage
 
