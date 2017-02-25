@@ -6,5 +6,4 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                 [environ "1.1.0"]]
   :plugins [[lein-environ "1.1.0"]]
-  :env {:gpio-path "/sys/class/gpio"}
   :profiles {:test {:env {:gpio-path "/tmp/gpio"}}})
