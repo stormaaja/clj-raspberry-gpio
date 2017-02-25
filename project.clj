@@ -1,4 +1,4 @@
-(defproject clj-raspberry-gpio "0.1.1"
+(defproject clj-raspberry-gpio "0.1.2"
   :description "Simple Clojure library for using Raspberry Pi GPIO."
   :url "https://github.com/stormaaja/clj-raspberry-gpio"
   :license {:name "MIT License"
