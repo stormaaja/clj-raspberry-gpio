@@ -10,7 +10,7 @@
 
 (def ^:private default-base-path "/sys/class/gpio")
 
-(defn detect-base-path
+(defn- detect-base-path
   []
   (if (:gpio-path env)
     (:gpio-path env)
