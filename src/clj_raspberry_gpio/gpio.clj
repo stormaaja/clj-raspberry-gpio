@@ -8,7 +8,15 @@
 (def in "in")
 (def out "out")
 
-(def ^:private base-path (:gpio-path env))
+(def ^:private default-base-path "")
+
+(defn detect-base-path
+  []
+  (if (:gpio-path env)
+    (:gpio-path env)
+    default-base-path))
+
+(def ^:private base-path (detect-base-path))
 (def ^:private setup-path (format "%s/export" base-path))
 (def ^:private cleanup-path (format "%s/unexport" base-path))
 
