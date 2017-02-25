@@ -8,7 +8,7 @@
 (def in "in")
 (def out "out")
 
-(def ^:private default-base-path "")
+(def ^:private default-base-path "/sys/class/gpio")
 
 (defn detect-base-path
   []
