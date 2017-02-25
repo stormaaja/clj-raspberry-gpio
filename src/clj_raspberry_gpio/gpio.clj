@@ -8,9 +8,9 @@
 (def in "in")
 (def out "out")
 
-(def base-path (:gpio-path env))
-(def setup-path (format "%s/export" base-path))
-(def cleanup-path (format "%s/unexport" base-path))
+(def ^:private base-path (:gpio-path env))
+(def ^:private setup-path (format "%s/export" base-path))
+(def ^:private cleanup-path (format "%s/unexport" base-path))
 
 (defn- pin-path
   [pin]
